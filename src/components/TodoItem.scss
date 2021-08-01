@@ -1,0 +1,83 @@
+.TodoItem {
+	width: 100%;
+	border-radius: 0.4rem;
+	margin-right: 0px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	color: whitesmoke;
+	padding: 10px;
+	margin-top: 10px;
+	background: #da4453; /* fallback for old browsers */
+	background: -webkit-linear-gradient(
+		to right,
+		#89216b,
+		#da4453
+	); /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(
+		to right,
+		#89216b,
+		#da4453
+	); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.TodoItem:nth-child(4n + 1) {
+	background: #2193b0; /* fallback for old browsers */
+	background: -webkit-linear-gradient(
+		to right,
+		#6dd5ed,
+		#2193b0
+	); /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(
+		to right,
+		#6dd5ed,
+		#2193b0
+	); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.TodoItem:nth-child(4n + 2) {
+	background: #fe8c00; /* fallback for old browsers */
+	background: -webkit-linear-gradient(
+		to right,
+		#f83600,
+		#fe8c00
+	); /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(
+		to right,
+		#f83600,
+		#fe8c00
+	); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.TodoItem:nth-child(4n + 3) {
+	background: #8e2de2; /* fallback for old browsers */
+	background: -webkit-linear-gradient(
+		to right,
+		#4a00e0,
+		#8e2de2
+	); /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(
+		to right,
+		#4a00e0,
+		#8e2de2
+	); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.TodoItem:last-child {
+	border: none;
+}
+.TodoItem > .TodoItem__text {
+	flex: 1;
+}
+.TodoItem__buttons {
+	display: flex;
+	align-items: center;
+}
+.TodoItem__buttons .MuiSvgIcon-root {
+	color: #212121;
+}
+.TodoItem__buttons > button {
+	margin-right: 10px;
+}
+.complete {
+	text-decoration: line-through;
+	opacity: 0.5;
+}

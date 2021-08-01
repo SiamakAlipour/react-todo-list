@@ -1,0 +1,72 @@
+.Header {
+	position: static;
+	top: 0;
+	z-index: 100;
+	width: 100%;
+	height: 50px;
+	background: #212121; /* fallback for old browsers */
+
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	margin-top: 0px;
+}
+.Header__right > ul {
+	display: flex;
+	align-items: center;
+	text-align: center;
+	list-style: none;
+	margin-top: 10px;
+}
+
+.Header__right > ul > li {
+	margin-left: 20px;
+	text-decoration: none;
+	color: white;
+	font-family: IRANSans;
+	cursor: pointer;
+}
+.Header__right > ul > .rodal > .rodal-dialog {
+	width: 600px !important;
+	height: 520px !important;
+	// background: rgb(0, 151, 255) !important;
+	// background: linear-gradient(
+	// 	90deg,
+	// 	rgba(0, 151, 255, 1) 0%,
+	// 	rgba(61, 170, 255, 1) 100%
+	// ) !important;
+}
+.Header__right > ul > .rodal > .rodal-dialog > .rodal-close {
+	background-color: white;
+	border-radius: 20px;
+	padding: 10px;
+}
+.Header__left {
+	flex: 0.4;
+}
+.Header__left--searchBox {
+	display: flex;
+	align-items: center;
+	background-color: whitesmoke;
+	width: 100%;
+	height: 35px;
+	border-radius: 25px;
+	padding: 10px;
+}
+.Header__left--searchBox > input {
+	border: none;
+	outline: none;
+	background-color: whitesmoke;
+	width: 100%;
+	margin-right: 10px;
+}
+
+.Header__left--searchBox > .MuiSvgIcon-root {
+	color: gray;
+}
+
+@media screen and (max-width: 960px) {
+	.Header__right > ul > .rodal > .rodal-dialog {
+		width: 100% !important;
+	}
+}
