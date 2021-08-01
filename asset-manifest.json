@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/todo-django-react/static/css/main.c116cc14.chunk.css",
-    "main.js": "/todo-django-react/static/js/main.a5305aec.chunk.js",
-    "main.js.map": "/todo-django-react/static/js/main.a5305aec.chunk.js.map",
-    "runtime-main.js": "/todo-django-react/static/js/runtime-main.f89c071f.js",
-    "runtime-main.js.map": "/todo-django-react/static/js/runtime-main.f89c071f.js.map",
-    "static/css/2.ccb337a1.chunk.css": "/todo-django-react/static/css/2.ccb337a1.chunk.css",
-    "static/js/2.51c3deb2.chunk.js": "/todo-django-react/static/js/2.51c3deb2.chunk.js",
-    "static/js/2.51c3deb2.chunk.js.map": "/todo-django-react/static/js/2.51c3deb2.chunk.js.map",
-    "index.html": "/todo-django-react/index.html",
-    "static/css/2.ccb337a1.chunk.css.map": "/todo-django-react/static/css/2.ccb337a1.chunk.css.map",
-    "static/css/main.c116cc14.chunk.css.map": "/todo-django-react/static/css/main.c116cc14.chunk.css.map",
-    "static/js/2.51c3deb2.chunk.js.LICENSE.txt": "/todo-django-react/static/js/2.51c3deb2.chunk.js.LICENSE.txt",
-    "static/media/index.scss": "/todo-django-react/static/media/IRANSansWeb.68370f63.woff"
+    "main.css": "/react-todo-list/static/css/main.2b44f9ac.chunk.css",
+    "main.js": "/react-todo-list/static/js/main.a5305aec.chunk.js",
+    "main.js.map": "/react-todo-list/static/js/main.a5305aec.chunk.js.map",
+    "runtime-main.js": "/react-todo-list/static/js/runtime-main.17647e41.js",
+    "runtime-main.js.map": "/react-todo-list/static/js/runtime-main.17647e41.js.map",
+    "static/css/2.ccb337a1.chunk.css": "/react-todo-list/static/css/2.ccb337a1.chunk.css",
+    "static/js/2.51c3deb2.chunk.js": "/react-todo-list/static/js/2.51c3deb2.chunk.js",
+    "static/js/2.51c3deb2.chunk.js.map": "/react-todo-list/static/js/2.51c3deb2.chunk.js.map",
+    "index.html": "/react-todo-list/index.html",
+    "static/css/2.ccb337a1.chunk.css.map": "/react-todo-list/static/css/2.ccb337a1.chunk.css.map",
+    "static/css/main.2b44f9ac.chunk.css.map": "/react-todo-list/static/css/main.2b44f9ac.chunk.css.map",
+    "static/js/2.51c3deb2.chunk.js.LICENSE.txt": "/react-todo-list/static/js/2.51c3deb2.chunk.js.LICENSE.txt",
+    "static/media/index.scss": "/react-todo-list/static/media/IRANSansWeb.68370f63.woff"
   },
   "entrypoints": [
-    "static/js/runtime-main.f89c071f.js",
+    "static/js/runtime-main.17647e41.js",
     "static/css/2.ccb337a1.chunk.css",
     "static/js/2.51c3deb2.chunk.js",
-    "static/css/main.c116cc14.chunk.css",
+    "static/css/main.2b44f9ac.chunk.css",
     "static/js/main.a5305aec.chunk.js"
   ]
 }
