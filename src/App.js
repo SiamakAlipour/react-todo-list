@@ -1,7 +1,7 @@
 import "./App.scss";
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Header from "./components/Header";
-import SignInUp from "./components/login/SignInUp";
+
 import Main from "./components/Main";
 function App() {
 	const [callback, setCallback] = useState("");
@@ -13,7 +13,7 @@ function App() {
 		<div className='App'>
 			<Header parentCallback={callBackFuncion} />
 
-			<Main />
+			<Main searchValue={callback} />
 		</div>
 	);
 }
