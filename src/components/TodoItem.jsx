@@ -1,22 +1,22 @@
-import React, { useState } from "react";
-import "./TodoItem.scss";
-import { Button } from "react-bootstrap";
-import DeleteIcon from "@material-ui/icons/Delete";
-import EditIcon from "@material-ui/icons/Edit";
-import TodoInput from "./TodoInput";
-import { Draggable } from "react-beautiful-dnd";
+import React, { useState } from 'react'
+import './TodoItem.scss'
+import { Button } from 'react-bootstrap'
+import DeleteIcon from '@material-ui/icons/Delete'
+import EditIcon from '@material-ui/icons/Edit'
+import TodoInput from './TodoInput'
+import { Draggable } from 'react-beautiful-dnd'
 function TodoItem({ list, value, onRemove, onComplete, onEdit }) {
 	const [edit, setEdit] = useState({
 		id: null,
-		value: "",
-	});
+		value: '',
+	})
 	const submitUpdate = (value) => {
-		onEdit(edit.id, value);
+		onEdit(edit.id, value)
 		setEdit({
 			id: null,
-			value: "",
-		});
-	};
+			value: '',
+		})
+	}
 
 	if (edit.id) {
 		return (
@@ -25,7 +25,7 @@ function TodoItem({ list, value, onRemove, onComplete, onEdit }) {
 				onSubmit={submitUpdate}
 				textEdit={edit.text}
 			/>
-		);
+		)
 	}
 
 	return list.map((todo, id) => (
@@ -33,7 +33,7 @@ function TodoItem({ list, value, onRemove, onComplete, onEdit }) {
 			{(provided) => (
 				<div
 					className={
-						todo.isComplete ? "TodoItem complete" : "TodoItem"
+						todo.isComplete ? 'TodoItem complete' : 'TodoItem'
 					}
 					{...provided.draggableProps}
 					{...provided.dragHandleProps}
@@ -63,7 +63,7 @@ function TodoItem({ list, value, onRemove, onComplete, onEdit }) {
 				</div>
 			)}
 		</Draggable>
-	));
+	))
 }
 
-export default TodoItem;
+export default TodoItem

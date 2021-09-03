@@ -1,60 +1,59 @@
-import React, { useState, useEffect } from "react";
-import "./TodoList.scss";
-import TodoItem from "./TodoItem";
-import TodoInput from "./TodoInput";
-import { DragDropContext, Droppable } from "react-beautiful-dnd";
-// import { connect } from "react-redux";
-// import { fetchTodos } from "../actions/todoActions";
+import React, { useState, useEffect } from 'react'
+import './TodoList.scss'
+import TodoItem from './TodoItem'
+import TodoInput from './TodoInput'
+import { DragDropContext, Droppable } from 'react-beautiful-dnd'
+import { useDispatch, useSelector } from 'react-redux'
 function TodoList({ searchValue }) {
-	const [todos, setTodos] = useState([]);
-	const [search, setSearch] = useState("");
-	const [searchTodos, setSearchTodos] = useState([]);
+	const [todos, setTodos] = useState([])
+	const [search, setSearch] = useState('')
+	const [searchTodos, setSearchTodos] = useState([])
 	useEffect(() => {
-		setSearch(searchValue);
+		setSearch(searchValue)
 		setSearchTodos(
 			todos.filter((todo) =>
 				todo.text.toLowerCase().includes(search.toLowerCase())
 			)
-		);
-	}, [searchValue, search, todos]);
+		)
+	}, [searchValue, search, todos])
 	const handleOnDragEnd = (result) => {
-		if (!result.destination) return;
-		const items = Array.from(todos);
-		const [reorderedItem] = items.splice(result.source.index, 1);
-		items.splice(result.destination.index, 0, reorderedItem);
-		setTodos(items);
-	};
+		if (!result.destination) return
+		const items = Array.from(todos)
+		const [reorderedItem] = items.splice(result.source.index, 1)
+		items.splice(result.destination.index, 0, reorderedItem)
+		setTodos(items)
+	}
 	const addTodo = (todo) => {
-		if (!todo.text || /^\s*$/.test(todo.text)) return;
+		if (!todo.text || /^\s*$/.test(todo.text)) return
 
-		const newTodos = [todo, ...todos];
+		const newTodos = [todo, ...todos]
 
-		setTodos(newTodos);
-		console.log(todo, ...todos);
-	};
+		setTodos(newTodos)
+		console.log(todo, ...todos)
+	}
 	const removeTodo = (id) => {
-		const newTodos = todos.filter((todo) => todo.id !== id);
-		setTodos(newTodos);
-	};
+		const newTodos = todos.filter((todo) => todo.id !== id)
+		setTodos(newTodos)
+	}
 	const updateTodo = (id, newValue) => {
-		if (!newValue.text || /^\s*$/.test(newValue.text)) return;
+		if (!newValue.text || /^\s*$/.test(newValue.text)) return
 		setTodos((prev) =>
 			prev.map((item) => (item.id === id ? newValue : item))
-		);
-	};
+		)
+	}
 	const completeTodo = (id) => {
 		let updatedTodos = todos.map((todo) => {
 			if (todo.id === id) {
-				todo.isComplete = !todo.isComplete;
+				todo.isComplete = !todo.isComplete
 			}
-			return todo;
-		});
-		setTodos(updatedTodos);
-	};
+			return todo
+		})
+		setTodos(updatedTodos)
+	}
 
 	return (
 		<div className='TodoList'>
-			<TodoInput onSubmit={addTodo} buttonText={"Add"} />
+			<TodoInput onSubmit={addTodo} buttonText={'Add'} />
 			<DragDropContext onDragEnd={handleOnDragEnd}>
 				<Droppable droppableId='todoslist'>
 					{(provided) => (
@@ -83,7 +82,7 @@ function TodoList({ searchValue }) {
 				</Droppable>
 			</DragDropContext>
 		</div>
-	);
+	)
 }
 
-export default TodoList;
+export default TodoList
